@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33502.453
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExofEmployee_static", "ExofEmployee_static\ExofEmployee_static.csproj", "{46F4F7C9-AC5A-4530-AD93-B951CCC86A7A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46F4F7C9-AC5A-4530-AD93-B951CCC86A7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46F4F7C9-AC5A-4530-AD93-B951CCC86A7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46F4F7C9-AC5A-4530-AD93-B951CCC86A7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46F4F7C9-AC5A-4530-AD93-B951CCC86A7A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E519EDD5-9670-48C7-9B1A-C1B372034570}
+	EndGlobalSection
+EndGlobal

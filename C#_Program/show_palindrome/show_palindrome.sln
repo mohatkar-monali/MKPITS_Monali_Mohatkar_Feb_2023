@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33502.453
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "show_palindrome", "show_palindrome\show_palindrome.csproj", "{B5E66B96-50C4-4BD2-AAC1-FD9E6D08FD92}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5E66B96-50C4-4BD2-AAC1-FD9E6D08FD92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5E66B96-50C4-4BD2-AAC1-FD9E6D08FD92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5E66B96-50C4-4BD2-AAC1-FD9E6D08FD92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5E66B96-50C4-4BD2-AAC1-FD9E6D08FD92}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {39387B99-4927-4A5B-BB66-70F5A53E4470}
+	EndGlobalSection
+EndGlobal

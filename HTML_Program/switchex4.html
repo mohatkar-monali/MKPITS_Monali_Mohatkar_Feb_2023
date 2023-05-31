@@ -1,0 +1,59 @@
+<html>
+       <script>
+            function check()
+              {
+                var month,result;
+                month=document.getElementById("c1").value;
+                switch(month)
+                {
+                   case "j":
+                   result="january";
+                   break;
+                   case "f":
+                   result="february";
+                   break;
+                   case "m":
+                   result="march";
+                   break;
+                   case "a":
+                   result="april";
+                   break;
+                   case "ma":
+                   result="may";
+                   break;
+                   case "j":
+                   result="june";
+                   break;
+                   case "jl":
+                   result="july";
+                   break;
+                   case "a":
+                   result="august";
+                   break;
+                   case "s":
+                   result="sptember";
+                   break;
+                   case "oc":
+                   result="october";
+                   break;
+                   case "n":
+                   result="november";
+                   break;
+                   case "d":
+                   result="december";
+                   break;
+                   
+                   
+                   default:
+                   result="month not found";
+                   break;
+                }
+                alert("result="+result);
+             
+            }    
+       </script>
+       <body>
+             month=<input type=text id="c1"/><br><br>
+             <input type=button value="result" onclick="check()";/>
+      </body>
+</html>

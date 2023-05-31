@@ -1,0 +1,31 @@
+<html>
+
+<body>
+Firstname:<input type= text id="fname" /><br><br>
+Lastname:<input type= text id="lname" /><br><br>
+Email:<input type= text id="mail" /><br><br>
+Mobileno:<input type= text id="mob" /><br><br>
+<input type="button" value="submit" onclick="regForm()"; />
+<br>
+<span id="fna">Firstname:</span><br>
+<span id="lna">Lastname:</span><br>
+<span id="ema">Email:</span><br>
+<span id="mob">Mobile no:</span><br>
+</body>
+<script language ="javascript">
+function regForm ()
+{
+ var Firstname,Lastname,Email,Mobno;
+Firstname =(document.getElementById("fname").value);
+Lastname =(document.getElementById("lname").value);
+Email=(document.getElementById("mail").value);
+Mobileno =(document.getElementById("mob").value);
+
+document.getElementById("fna").innerHTML="Firstname =" +Firstname;
+document.getElementById("lna").innerHTML="Lastname =" +Lastname;
+document.getElementById("ema").innerHTML="Email =" +Email;
+document.getElementById("mob").innerHTML="Mobile no =" +Mobno;
+
+}
+</script>
+</html>

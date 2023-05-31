@@ -1,0 +1,22 @@
+<!--Write a program that determines whether a given year is a leap year or not.-->
+<html>
+      <script>
+               <!--code to check leap year-->
+               function checkYear()
+               {
+                   var year=document.getElementById("y1").value;
+                   if((year%4==0) && (year%100!=0) ||(year%400==0))
+                   {
+                       alert(year+"is a leap year");
+                   }
+                   else
+                   {
+                       alert(year+"is not a leap year");
+                   }
+               }
+      </script>
+      <body>
+             enter year:<input type=text id="y1"/><br>
+             <input type=button value="show" onclick="checkYear()";/>
+     </body>
+</html>

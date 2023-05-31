@@ -1,0 +1,17 @@
+<html>
+     <script>
+         function reverse()
+         {
+              var num=document.getElementById("n1").value;
+              var digit1=num%10;
+              var digit2=Math.floor(num/10)%10;
+              var digit3=Math.floor(num/100);
+              var revnumber=(digit1*100)+(digit2*10)+digit3;
+              alert(revnumber);
+         }
+     </script>
+     <body>
+            enter number=<input type=text id="n1"/><br><br>
+            <input type=button value="reverse" onclick="reverse()";/>
+     </body>
+</html>

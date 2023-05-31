@@ -1,0 +1,45 @@
+<html>
+<script language="javascript">
+function isLeapYear(year)
+{
+  
+  return ( ((year%4 == 0) && (year%100 != 0)) || (year%400 == 0));
+}
+
+function findDaysInMonth(month, year) 
+{
+   var year,month;
+   year=parseInt(document.getElementById("y1").value);
+   month=parseInt(document.getElementById("m1").value);
+  if(month < 1 || month > 12)
+     {
+        alert("Invalid Month");
+        return;
+     }
+
+  if(month ==2)
+{            
+    if(isLeapYear(year))
+    {
+       alert("The Month has 29 days");    
+    }
+    else
+    {
+       alert("The Month has 28 days");   
+    }
+}
+  else if(month == 4 || month == 6 || month == 9 || month== 11)
+{
+     alert("The Month has 30 days");    
+}
+  else
+{
+     alert("The Month has 31 days");
+}
+}
+</script>
+<body>
+               year=<input type=text id="y1"/><br><br>
+               month=<input type=text id="m1"/><br><br>
+              <input type=button value="check" onclick="findDaysInMonth()";/>
+ </body>

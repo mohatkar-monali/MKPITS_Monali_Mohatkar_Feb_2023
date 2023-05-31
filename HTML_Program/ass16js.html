@@ -1,0 +1,16 @@
+<html>
+        <script>
+                 function findWord()
+                 {
+                     var str=document.getElementById("s1").value;
+                     var len=str.length();
+                     var word=str.split();
+                     var lonestword=max(word,key=len);
+                     document.write("Longest word in sentence is "+longestword);
+                }
+        </script>
+        <body>
+               enter sentence:<input type=text id="s1"/><br>
+               <input type=button value="longest-word" onclick="findWord();"/>
+        </body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+        <script language="javascript">
+                 function recArea () {
+                                       var length,breadth,area;
+                                       length=parseInt(document.getElementById("len").value);
+                                       breadth=parseInt(document.getElementById("bread").value);
+                                       area=length*breadth;
+                                       document.getElementById("em").innerHTML="area="+area;
+                                      }
+        </script>
+        <body>
+               length:<input type=text id="len"/><br><br>
+               breadth:<input type=text id="bread"/><br><br>
+               <input type=button value="area" onclick="recArea()";/><br><br>
+               <span id="em">area:</span>
+        </body>
+</html>

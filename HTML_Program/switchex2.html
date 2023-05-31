@@ -1,0 +1,34 @@
+<html>
+       <script>
+            function check()
+              {
+                var char,result;
+                char=document.getElementById("c1").value;
+                switch(char)
+                {
+                   case "a":
+                   result="vowel";
+                   break;
+                   case "e":
+                   result="vowel";
+                   break;
+                   case "i":
+                   result="vowel";
+                   break;
+                   case "o":
+                   result="vowel";
+                   case "u":
+                   result="vowel";
+                   default:
+                   result="its a consonants";
+                   break;
+                }
+                alert("result="+result);
+             
+            }    
+       </script>
+       <body>
+             char=<input type=text id="c1"/><br><br>
+             <input type=button value="result" onclick="check()";/>
+      </body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+       <script language="javascript">
+       function checkRange ()
+                 {
+                   var start,end,num;
+                   num=parseInt(document.getElementById("n1").value);
+                   start=parseInt(document.getElementById("s1").value);
+                   end=parseInt(document.getElementById("e1").value);
+                   if ((num>=start) && (num<=end))
+                   { 
+                        alert("number is between the range");
+                    }
+                    else
+                    {
+                          alert("number is  not between the range");
+                    }
+                 }                               
+       </script>
+       <body>
+               num=<input type=text id="n1"/><br><br>
+               start=<input type=text id="s1"/><br><br>
+               end=<input type=text id="e1"/><br><br>
+               <input type=button value="check" onclick="checkRange()";/>
+       </body>
+</html>

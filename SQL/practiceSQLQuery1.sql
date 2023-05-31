@@ -1,0 +1,13 @@
+create table department(depid int primary key,dptname varchar(20),managerid int,locationid int)
+insert into department values(10,'administration',200,1700)
+insert into department values(20,'marketing',201,1800)
+insert into department values(30,'prchasing',114,1700)
+insert into department values(40,'human resorces',203,2400)
+insert into department values(50,'shipping',121,1500)
+insert into department values(60,'IT',103,1400)
+insert into department values(70,'public realtions',204,2700)
+insert into department values(80,'saales',145,2500)
+insert into department values(90,'exicutive',100,1700)
+insert into deprtment values(100,'finance',108,1700)
+
+create table employee(EMPLOYEE_ID int, FIRST_NAME varchar(20),LAST_NAME  varchar(20),EMAIL varchar(20),PHONE_NUMBER int,HIRE_DATE JOB_ID     | SALARY   | COMMISSION_PCT | MANAGER_ID | DEPARTMENT_ID |)

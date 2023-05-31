@@ -1,0 +1,43 @@
+<html>
+       <script>
+            function check()
+              {
+                var char,result;
+                char=document.getElementById("c1").value;
+                switch(char)
+                {
+                   case "m":
+                   result="Monday";
+                   break;
+                   case "t":
+                   result="Tuesday";
+                   break;
+                   case "w":
+                   result="Wednsday";
+                   break;
+                   case "th":
+                   result="Thursday";
+                   break;
+                   case "f":
+                   result="Friday";
+                   break;
+                   case "s":
+                   result="saturday";
+                   break;
+                   case "sn":
+                   result="sunday";
+                   break;
+                   
+                   default:
+                   result="day not found";
+                   break;
+                }
+                alert("result="+result);
+             
+            }    
+       </script>
+       <body>
+             char=<input type=text id="c1"/><br><br>
+             <input type=button value="result" onclick="check()";/>
+      </body>
+</html>

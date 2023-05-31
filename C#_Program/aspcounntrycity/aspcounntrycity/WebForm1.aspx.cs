@@ -36,7 +36,18 @@ namespace aspcounntrycity
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-        
+          System.Text.StringBuilder sb = new System.Text.StringBuilder();   
+            sb.Append("Country"+DropDownList1.Text+"<br>");
+            sb.Append("City" + DropDownList2.Text + "<br>");
+            foreach (ListItem li in CheckBoxList1.Items)
+            {
+                if (li.Selected)
+                {
+                    sb.Append("Course" + li.Value + "<br>");
+                }
+            }
+            Label1.Text = sb.ToString();
+
         }
     }
 }

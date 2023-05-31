@@ -1,0 +1,27 @@
+<html>
+   
+   <body>
+    Account No: <input type="text" id="acc" /> <br> <br>
+    Initial balance : <input type="text" id="ini" /> <br> <br>
+    Amount  : <input type="text" id="am" /> <br> <br>
+    <input type="button" value="Deposit" onclick="accountBal();" />
+    <input type="button" value="Withdrawl" onclick="accountBal();" />
+    <br> <br> <span id="pvr">  Balance is : </span>
+    <span id="pqr">  Balance is : </span>
+</body>
+<script language="javascript">
+    function accountBal()
+     {
+   var accountno, Inbalance, amount, dep, with;
+        Accountno = (document.getElementById("acc").value);
+       Inbalance = parseInt(document.getElementById("ini").value);
+        Amount = parseInt(document.getElementById("am").value);
+        Dep= Inbalance + amount;
+        with=Inbalance-amount;
+  document.getElementById("pvr").innerHTML="Deposit amount is: "+dep;    
+    document.getElementById("pqr").innerHTML="Deposit amount is: "+with;     
+}
+
+
+</script>
+</html>

@@ -1,0 +1,29 @@
+<html>
+       <script language="javascript">
+               function showGreater ()
+               {
+                 var num1,num2;
+                 num1=document.getElementById("number1").value;  
+                 num2=document.getElementById("number2").value;
+                 if (num1>num2)
+                 {
+                   
+                
+                   document.getElementById("pqr").innerHTML="num1 is greater than num2";
+                 }
+                 else 
+                 {
+                      
+                     document.getElementById("pqr").innerHTML="num2 is greater tha1 num2";
+                 }
+               }  
+                        
+       </script>
+       <body>
+               num1:<input type=text id="number1"/><br><br>
+               num2:<input type=text id="number2"/><br><br>
+               <input type=button value="show greater" onclick="showGreater()";/>
+               <span id="pqr">result:</span>
+              
+       </body>
+</html>

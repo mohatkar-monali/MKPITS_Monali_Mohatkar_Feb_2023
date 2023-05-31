@@ -1,0 +1,208 @@
+<html>
+       <head>
+              <style>
+                      td{text-align:center;}
+              </style>
+       </head>
+        <form name="f1" style="width:400; height:450; border:1px solid black">
+           <table width=100% align=center>
+                  <tr>
+                       <td><input type=text name="t1" style="width:100%;padding:10px;"/></td>
+                 </tr> 
+           </table>   
+           <table width=100% align=center>
+                 <tr>
+                      <td><input type=button name="b1" value="1" style="padding:25px;" onclick="show1()";/></td>
+                      <td><input type=button name="b2" value="2" style="padding:25px;" onclick="show2()";/></td>
+                      <td><input type=button name="b3" value="3" style="padding:25px;" onclick="show3()";/></td>
+                 </tr> 
+                  <tr>
+                      <td><input type=button name="b4" value="4" style="padding:25px;" onclick="show4()";/></td>
+                      <td><input type=button name="b5" value="5" style="padding:25px;" onclick="show5()";/></td>
+                      <td><input type=button name="b6" value="6" style="padding:25px;" onclick="show6()";/></td>
+                 </tr>
+                  <tr>
+                      <td><input type=button name="b7" value="7" style="padding:25px;" onclick="show7()";/></td>
+                      <td><input type=button name="b8" value="8" style="padding:25px;" onclick="show8()";/></td>
+                      <td><input type=button name="b9" value="9" style="padding:25px;" onclick="show9()";/></td>
+                 </tr>
+                 <tr>
+                      <td><input type=button name="b10" value="+" style="padding:25px;" onclick="showplus()";/></td>
+                      <td><input type=button name="b11" value="-" style="padding:25px;" onclick="showminus()";/></td>
+                      <td><input type=button name="b12" value="*" style="padding:25px;" onclick="showmul()";/></td>
+                 </tr> 
+                  <tr>
+                      <td><input type=button name="b13" value="%" style="padding:25px;" onclick="showdiv()";/></td>
+                     
+                      <td><input type=button name="b14" value="=" style="padding:25px;" onclick="showresult()";/></td>
+                 </tr> 
+           </table>
+      <script>
+                var prevnum=0;
+                var operator;
+                function show1()
+                           {
+                                if(document.f1.t1.value == "+" || document.f1.t1.value == "-" || document.f1.t1.value == "*" || document.f1.t1.value == "/")
+                                {
+                                   document.f1.t1.value=""; 
+                                   document.f1.t1.value="1";
+                                }
+                                else
+                                {
+                                   document.f1.t1.value=document.f1.t1.value+"1";
+                                }
+                           }
+               function show2()
+                           {
+                                if(document.f1.t1.value == "+" || document.f1.t1.value == "-" || document.f1.t1.value == "*" || document.f1.t1.value == "/" )
+                                {
+                                   document.f1.t1.value="";
+                                   document.f1.t1.value="2";
+                                }
+                                else
+                                {
+                                   document.f1.t1.value=document.f1.t1.value+"2";
+                                }
+                           }
+               function show3()
+                           {
+                                if(document.f1.t1.value == "+" || document.f1.t1.value == "-" || document.f1.t1.value == "*" || document.f1.t1.value == "/")
+                                {
+                                   document.f1.t1.value="";
+                                   document.f1.t1.value="3";
+                                }
+                                else
+                                {
+                                   document.f1.t1.value=document.f1.t1.value+"3";
+                                }
+                           }
+                function show4()
+                           {
+                                 if(document.f1.t1.value == "+" || document.f1.t1.value == "-" || document.f1.t1.value == "*" || document.f1.t1.value == "/")
+                                {
+                                   document.f1.t1.value="";
+                                   document.f1.t1.value="4";
+                                }
+                                else
+                                {
+                                   document.f1.t1.value=document.f1.t1.value+"4";
+                                }
+                           }
+               function show5()
+                           {
+                                  if(document.f1.t1.value == "+" || document.f1.t1.value == "-" || document.f1.t1.value == "*" || document.f1.t1.value == "/")
+                                {
+                                   document.f1.t1.value="";
+                                   document.f1.t1.value="5";
+                                }
+                                else
+                                {
+                                   document.f1.t1.value=document.f1.t1.value+"5";
+                                }
+                           }
+               function show6()
+                           {
+                                 if(document.f1.t1.value == "+" || document.f1.t1.value == "-" || document.f1.t1.value == "*"  || document.f1.t1.value == "/")
+                                {
+                                   document.f1.t1.value="";
+                                   document.f1.t1.value="6";
+                                }
+                                else
+                                {
+                                   document.f1.t1.value=document.f1.t1.value+"6";
+                                }
+                           }
+               function show7()
+                           {
+                                 if(document.f1.t1.value == "+" || document.f1.t1.value == "-" || document.f1.t1.value == "*" || document.f1.t1.value == "/")
+                                {
+                                   document.f1.t1.value="";
+                                   document.f1.t1.value="7";
+                                }
+                                else
+                                {
+                                   document.f1.t1.value=document.f1.t1.value+"7";
+                                }
+                           }
+               function show8()
+                           {
+                                 if(document.f1.t1.value == "+" || document.f1.t1.value == "-" || document.f1.t1.value == "*"  || document.f1.t1.value == "/")
+                                {
+                                   document.f1.t1.value="";
+                                   document.f1.t1.value="8";
+                                }
+                                else
+                                {
+                                   document.f1.t1.value=document.f1.t1.value+"8";
+                                }
+                           }
+               function show9()
+                           {
+                                 if(document.f1.t1.value == "+" || document.f1.t1.value == "-" || document.f1.t1.value == "*" || document.f1.t1.value == "/")
+                                {
+                                   document.f1.t1.value="";
+                                   document.f1.t1.value="9";
+                                }
+                                else
+                                {
+                                   document.f1.t1.value=document.f1.t1.value+"9";
+                                }
+                           }
+               function showplus()
+                           {
+                                prevnum=document.f1.t1.value;
+                                operator="+";
+                                document.f1.t1.value="+";
+                           }
+               function showminus()
+                          {
+                                 prevnum=document.f1.t1.value;
+                                 operator="-";
+                                 document.f1.t1.value="-";
+                          }
+               function showmul()
+                           {
+                                prevnum=document.f1.t1.value;
+                                operator="*";
+                                document.f1.t1.value="*";
+                           }
+               function showdiv()
+                          {
+                                 prevnum=document.f1.t1.value;
+                                 operator="/";
+                                 document.f1.t1.value="/";
+                          }
+                
+               function showresult()
+                          {
+                              var result=0;
+                              if(operator=="+")
+                              {
+                                 result=parseInt(prevnum) + parseInt(document.f1.t1.value);
+                                 document.f1.t1.value=result;
+                              }
+                              else if(operator=="-")
+                              {
+                                  result=parseInt(prevnum) - parseInt(document.f1.t1.value);
+                                  document.f1.t1.value=result;
+                              }
+                              else if(operator=="*")
+                              {
+                                   result=parseInt(prevnum) * parseInt(document.f1.t1.value);
+                                   document.f1.t1.value=result;
+                              }
+                              else if(operator=="/")
+                              {
+                                   result=parseInt(prevnum) / parseInt(document.f1.t1.value);
+                                   document.f1.t1.value=result;
+                              }
+                             
+                              else
+                              {
+                                  
+                                 document.f1.t1.value=result;
+                              }
+                          }
+      </script>
+        
+</html>

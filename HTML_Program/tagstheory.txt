@@ -1,0 +1,28 @@
+<p style="bgcolor:red; background-color:blue; color:white; font-size:5px; font-family:calibry;
+          text-align:center; border:1px solid red; padding:20px 20px; margin:20px 20px; 
+           background-size:cover; text-decoration:none; background-repeat:no-repeat;
+           float:left; background-color=rgb(--,--,--); background-color:#----;
+           background-image=url("-----"); background-attachment:fixed; background-position:right top;
+           background;rgba("--,--,--,---"); border-sizing:border-box; border-radius:--px; 
+           border-bottom:1px solid red; outline:none; border:none; transition:--s;
+           background-position:1px 10px; "><
+
+<font>----</font>
+<center>----</center>
+<alt>----</alt>
+<ins>---</ins>
+<del>----</del>
+<i>--</i>
+<mark>----</mark>
+<br>----</br>
+<strong>----</strong>
+<b>----</b>
+<img src="imagename.jpg">
+<abbr>---</abbr>
+<link rel="stylesheet" href="filename.css"/>
+<a href="filename.html">-------</a>
+<marque>----</marque>
+cursor:pointer;
+<input type ="button" vlaue="button">
+input [type=text]:focus{------};
+

@@ -1,0 +1,28 @@
+<html>
+       <script language="javascript">
+                function triangleType (side1,side2,side3)
+                   {
+                       var side1,side2,side3;
+                       if ((side1==side2) && (side1==side3))
+                       {
+                          alert("equilateral triangle");
+                       }
+                       else if ((side1==side2)||(side2==side3)||(side1==side3))
+                       {
+                            alert("triangle is isosceles");
+                       }
+                       else
+                       {
+                              alert("triangle is scalen");
+                       }
+                   }
+       </script>
+       <body>
+               enter side1:<input type=text name="s1"/><br><br>
+               enter side2:<input type=text name="s2"/><br><br>
+               enter side3:<input type=text name="s3"/><br><br>
+               <input type=button value="show" onclick="triangleType(document.getElementsByName('s1').value,
+                                                                     document.getElementsByName('s2').value,
+                                                                      document.getElementsByName('s3'). value)";/>
+       </body>
+</html>

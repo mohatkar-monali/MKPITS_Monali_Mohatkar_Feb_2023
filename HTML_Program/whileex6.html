@@ -1,0 +1,19 @@
+<html>
+      <script>
+             function table()
+               {
+                  var num,result=1,counter=1;
+                  num=parseInt(document.getElementById("n1").value);
+                  while(counter<=10)
+                  {
+                     result=num*counter;
+                     document.write(num+"*"+counter+"="+result+"<br>");
+                     counter++;
+                  }
+               }
+      </script>
+      <body>
+              num=<input type=text id="n1"/><br><br>
+              <input type=button value="result" onclick="table()";/>
+      </body>
+</html>

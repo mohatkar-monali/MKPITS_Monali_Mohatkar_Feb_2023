@@ -1,0 +1,27 @@
+<html>
+       <script language="javascript">
+                 
+               function exResult () {
+                                    var m1,m2,m3,total,percent;
+                                    m1=parseInt(document.getElementById("math").value);
+                                    m2=parseInt(document.getElementById("phy").value);
+                                    m3=parseInt(document.getElementById("chem").value);
+                                    total=m1+m2+m3;
+                                    percent=total/300*100;
+                                    document.getElementById("abc").innerHTML="total="+total;
+                                    document.getElementById("cde").innerHTML="percentage="+percent;
+                                 } 
+             
+       </script>
+       
+       <body>
+              mathmarks<input type=text id="math"/><br><br>
+              phymarks<input type=text id="phy"/><br><br>
+              chemmarks<input type=text id="chem"/><br><br>
+              <input type=button value="result" onclick="exResult()"/><br><br>
+             
+              <span id="abc">total:</span>
+              <span id="cde">percentage:</span>
+              
+       </body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+       <script language="javascript"> 
+               function operation (num1,num2,op)
+                {
+                   var num1,num2,op;
+                   num1=parseInt(document.getElementsByName('n1')[0].value);
+                   num2=parseInt(document.getElementsByName('n2')[0].value);
+                   if(op=="add")
+                   {
+                      addition=num1+num2;
+                      alert("addition is"+addition);
+                   }
+                   else if(op=="sub")
+                   {
+                      sub=num1-num2;
+                      alert("substraction is"+sub);
+                   }
+                   else if(op=="mul")
+                   {
+                      mul=num1*num2;
+                      alert("multiplication is"+mul);
+                   }
+                   else if(op=="div")
+                   {
+                      div=num1%num2;
+                      alert("division is"+div);
+                   }
+                   else if(op=="mod")
+                   {
+                      mod=num1%num2;
+                      alert("modulus is"+mod);
+                   }
+                }       
+       </script>
+       <body>
+               num1=<input type=text name="n1"/><br><br>
+               num2=<input type=text name="n2"/><br><br>
+               op=<input type=text name="o1"/><br><br>
+               <input type=button value="result" onclick="operation(document.getElementsByName('n1')[0].value,
+                                                                  document.getElementsByName('n2')[0].value,
+                                                                  document.getElementsByName('o1')[0].value)";/>
+       </body>
+</html>

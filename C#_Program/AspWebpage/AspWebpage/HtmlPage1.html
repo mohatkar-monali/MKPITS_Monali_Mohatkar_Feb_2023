@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        /* Make the image fully responsive  */
+        .carousel-inner img
+        {
+            background-image: url("img12.png");
+            background-size: cover;
+            background-repeat: repeat;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- code for navigation -->
+    <div>
+        <nav class="navbar navbar-expand-md  ">
+            <div class="row">
+                <div class="col-md-6"><img src="microsoftlogo.png" height=30 /></div>
+            </div>
+            <div class=" row">
+                <div class="col-md-6">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">Microsoft365</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Teams</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">Windows</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">Surface</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">Xbox</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">Support</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <br />
+    <br />
+    <!-- code for slider  image -->
+    <div class="container-fluid">
+        <div id="demo" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+
+            </ul>
+
+
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+                <div class="container-fluid">
+                    <div class="carousel-item ">
+                        <div class=".carousel-inner img">
+                        <h3>Microsoft 365</h3>
+                        <h5>Turn your ideas into reality, stay safer online and off, and focus on what matters most with Microsoft 365 apps</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item active">
+                        <img src="img13.png" alt="SurfacePro9" width="1100" height="300" />
+
+                        <h3>Surface Pro 9</h3>
+                        <h5>Tablet versatility and laptop power — all in one ultra-portable device</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

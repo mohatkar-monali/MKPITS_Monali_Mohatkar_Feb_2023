@@ -68,7 +68,7 @@
                     <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
                 </td>
                 <td>
-                    <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="TextBox4" Display="Dynamic" ErrorMessage="Age between 18 and 100" MaximumValue="100" MinimumValue="18" Type="Integer">Enter proper age</asp:RangeValidator>
+                    <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="TextBox4" Display="Dynamic" ErrorMessage="Age between 18 and 100" MaximumValue="100" MinimumValue="18" Type="Integer">Enter  age</asp:RangeValidator>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox4" Display="Dynamic" ErrorMessage="Age Can not be empty">Enter proper age</asp:RequiredFieldValidator>
                 </td>
             </tr>

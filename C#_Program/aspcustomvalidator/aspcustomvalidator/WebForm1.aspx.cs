@@ -57,7 +57,14 @@ namespace aspcustomvalidator
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Label1.Text = TextBox1.Text;
+            if (Page.IsValid)
+            {
+                Label1.Text = TextBox1.Text;
+            }
+            else
+            {
+                Label1.Text = "page is not valid";
+            }
         }
     }
 }

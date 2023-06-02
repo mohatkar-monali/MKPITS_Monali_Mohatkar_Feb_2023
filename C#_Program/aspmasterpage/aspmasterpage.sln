@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33502.453
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aspmasterpage", "aspmasterpage\aspmasterpage.csproj", "{F07238DE-C0BB-4EA1-A689-67244DEA8BA0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{76312CA5-A114-455D-8693-5060ED315F2B}"
+	ProjectSection(SolutionItems) = preProject
+		aspmasterpage\img11.avif = aspmasterpage\img11.avif
+		aspmasterpage\img12.png = aspmasterpage\img12.png
+		aspmasterpage\img13.png = aspmasterpage\img13.png
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F07238DE-C0BB-4EA1-A689-67244DEA8BA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F07238DE-C0BB-4EA1-A689-67244DEA8BA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F07238DE-C0BB-4EA1-A689-67244DEA8BA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F07238DE-C0BB-4EA1-A689-67244DEA8BA0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {77E05E21-DB9E-4C16-932F-34F0C94B131A}
+	EndGlobalSection
+EndGlobal

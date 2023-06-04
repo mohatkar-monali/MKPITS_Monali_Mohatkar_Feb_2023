@@ -1,0 +1,58 @@
+<html>
+<head>
+<script language="JavaScript">
+var name,city,age,college,branch,sub1,sub2,sub3,sub4,sub5,total;
+name=prompt("Enter your name");
+document.write("name:"+name+"<br>");
+
+city=prompt("enter city name");
+document.write("city:"+city +"<br>");
+
+age=prompt("enter your age");
+document.write("age:"+age +"<br>");
+
+college=prompt("enter your collge name");
+document.write("college:"+college +"<br>");
+
+branch=prompt("enter your branch name");
+document.write("branch:"+branch +"<br>");
+
+sub1=parseInt(prompt("enter the subject1 marks"));
+document.write("sub1:"+sub1 +"<br>");
+
+sub2=parseInt(prompt("enter the subject2 marks"));
+document.write("sub2:"+sub2+"<br>");
+
+sub3=parseInt(prompt("enter the subject3 marks"));
+document.write("sub3:"+sub3 +"<br>");
+
+sub4=parseInt(prompt("enter the subject4 marks"));
+document.write("sub4:"+sub4 +"<br>");
+
+sub5=parseInt(prompt("enter the subject5 marks"));
+document.write("sub5:"+sub5 +"<br>");
+
+total=sub1+sub2+sub3+sub4+sub5;
+document.write("total:"+total +"<br>");
+
+if(total>300)
+{
+ document.write("A grade");
+}
+else if(total>200 && total<300)
+{
+ document.write("B grade");
+}
+else if(toyal>100 && total<200)
+{
+ document.write("C grade");
+}
+else
+{
+ document.write("fail");
+}
+
+
+</script>
+</head>
+</html>

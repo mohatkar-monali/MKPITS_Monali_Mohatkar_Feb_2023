@@ -150,7 +150,7 @@ namespace fendhalproject
             {
                 MessageBox.Show("Please fill all the details");
             }
-            else if (textBox3.Text == "0")
+            else if (textBox10.Text == "0")
             {
                 MessageBox.Show("quantity can not be zero");
             }

@@ -79,9 +79,9 @@ namespace AspTrustProject1
 
         protected void Button4_Click(object sender, EventArgs e)
         {
-            str = "select * from Item_Master where Category=@category";
+            str = "select * from Item_Master where Item_Name=@Item_Name";
             dr=new SqlDataAdapter(str,con);
-            dr.SelectCommand.Parameters.AddWithValue("@category", DropDownList1.Text);
+            dr.SelectCommand.Parameters.AddWithValue("Item_Name", TextBox1.Text);
             dr.Fill(ds, "Item_Master");
             TextBox1.Text = ds.Tables["Item_Master"].Rows[0].ItemArray[1].ToString();
             TextBox2.Text = ds.Tables["Item_Master"].Rows[0].ItemArray[2].ToString();

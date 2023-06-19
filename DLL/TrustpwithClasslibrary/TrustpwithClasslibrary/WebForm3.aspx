@@ -13,13 +13,13 @@
     <p>
         &nbsp;</p>
     <p>
-        <asp:Button ID="Button5" runat="server" Text="Insert" />
+        <asp:Button ID="Button5" runat="server" Text="Insert" OnClick="Button5_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button6" runat="server" Text="Modify" />
+        <asp:Button ID="Button6" runat="server" Text="Modify" OnClick="Button6_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button7" runat="server" Text="Delete" />
+        <asp:Button ID="Button7" runat="server" Text="Delete" OnClick="Button7_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button8" runat="server" Text="Search" />
+        <asp:Button ID="Button8" runat="server" Text="Search" OnClick="Button8_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

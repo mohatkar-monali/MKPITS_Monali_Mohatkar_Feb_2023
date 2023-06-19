@@ -13,6 +13,8 @@ namespace Storelibrary
         static SqlConnection con = Dbconncetion.GetConnection();
         static string query = null;
         static  SqlCommand cmd=null;
+
+       
         //method to insert record into vendor master
         public static string InsertVendorMaster(string vendor_Name)
         {
@@ -34,6 +36,30 @@ namespace Storelibrary
             return res;
 
         }
+        //method to return vendor_id 
+        public static string getVendorId()
+        {
+            string res = null;
+            try
+            {
+                query = "select max(vendor_id) from vendor_master";
+                cmd = new SqlCommand(query, con);
+                con.Open();
+                int vid = Convert.ToInt32(cmd.ExecuteScalar());
+
+                res = vid.ToString();
+            }
+            catch (Exception ex)
+            {
+                res = ex.ToString();
+            }
+            finally
+            {
+                con.Close();
+
+            }
+            return res;
+        }
         //method to update record into vendor master
         public static string UpdateVendorMaster(string vendor_name,int vendor_id)
         {
@@ -41,8 +67,8 @@ namespace Storelibrary
             //code to check whether the vendorid exist or not
             query = "select count(*) from vendor_master where vendor_id=@vendor_id";
             cmd = new SqlCommand(query, con);
-            cmd.Parameters.AddWithValue("@vendor_id",vendor_id);
-          //  con.Open();
+            cmd.Parameters.AddWithValue("@vendor_id", vendor_id);
+          con.Open();
             int cnt=Convert.ToInt32(cmd.ExecuteScalar());
             con.Close();
             if (cnt > 0)

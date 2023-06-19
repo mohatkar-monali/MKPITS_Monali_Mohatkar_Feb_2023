@@ -13,7 +13,10 @@ namespace TrustpwithClasslibrary
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!Page.IsPostBack)
+            {
+                getvendorid();
+            }
         }
 
         protected void Button7_Click(object sender, EventArgs e)
@@ -34,6 +37,12 @@ namespace TrustpwithClasslibrary
             Label1.Text = res;
         }
 
+        public void getvendorid()
+        {
+            int res =Convert.ToInt32(Vendorclas.getVendorId());
+            res = res + 1;
+            TextBox3.Text = res.ToString();
+        }
         protected void Button4_Click(object sender, EventArgs e)
         {
             DataSet ds = new DataSet();

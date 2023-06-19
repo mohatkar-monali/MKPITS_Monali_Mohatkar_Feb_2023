@@ -14,7 +14,7 @@ namespace Storelibrary
         public static SqlConnection GetConnection()
         {
             con = new SqlConnection("server=INBOOK_X1\\TEW_SQLEXPRESS;integrated security=true;database=trust");
-            con.Open();
+           // con.Open();
             return con;
         }
     }

@@ -70,14 +70,19 @@ namespace DrivenItproject
             }
             finally { con.Close(); }
         }
-
+        static int transid = 0;
+        static int oldtransqty = 0;
         protected void Button2_Click(object sender, EventArgs e)
         {
+            Response.Write("transaction id is" + transid);
+            int updatedqty = 0;
+            updatedqty=Convert.ToInt32(TextBox2.Text)-oldtransqty;
+            Response.Write("updated quantity is"+updatedqty);
             try
             {
-                query = "update transactions set transtype=@transtype,transqty=@transqty,transedate=@transedate where itemid=@itemid";
+                query = "update transactions set itemid=@itemid,transtype=@transtype,transqty=@transqty,transedate=@transedate where transid=@transid";
                 SqlCommand cmd = new SqlCommand(query, con);
-            
+
                 string traanst = null;
                 if (RadioButton1.Checked)
                 {
@@ -87,10 +92,11 @@ namespace DrivenItproject
                 {
                     traanst = "R";
                 }
+                cmd.Parameters.AddWithValue("@itemid", DropDownList1.SelectedValue);
                 cmd.Parameters.AddWithValue("@transtype", traanst);
                 cmd.Parameters.AddWithValue("@transqty", TextBox2.Text);
                 cmd.Parameters.AddWithValue("@transedate", TextBox1.Text);
-                cmd.Parameters.AddWithValue("@itemid", DropDownList1.SelectedValue);
+                cmd.Parameters.AddWithValue("@transid", transid);
                 con.Open();
                 cmd.ExecuteNonQuery();
 
@@ -99,34 +105,62 @@ namespace DrivenItproject
                 cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@itemid", DropDownList1.SelectedValue);
                 int bq = Convert.ToInt32(cmd.ExecuteScalar());
-                if (traanst == "I")
+                Response.Write("bq" + bq.ToString());
+                Response.Write("updatedqty" + updatedqty.ToString());
+                if (RadioButton1.Checked)
                 {
-                    bq = bq - Convert.ToInt32(TextBox2.Text);
+                    bq = bq - updatedqty;
                 }
-                else if (traanst == "R")
+                if (RadioButton2.Checked)
                 {
-                    bq = bq + Convert.ToInt32(TextBox2.Text);
+                    bq = bq + updatedqty;
                 }
-
-                //updating baalqty on item mmaster
-                query = "update itemmaster set balqty=@balqty where itemid=@itemid";
-                cmd = new SqlCommand(query, con);
-                cmd.Parameters.AddWithValue("@balqty", bq);
-                cmd.Parameters.AddWithValue("itemid", DropDownList1.Text);
-                cmd.ExecuteNonQuery();
-                Label1.Text = "record updated";
-
+                Response.Write("newupdatedqty is " + bq.ToString());
+                if (bq < 0)
+                {
+                    Label1.Text = "stock not available";
+                }
+                else
+                {
+                    //updating baalqty on item mmaster
+                    query = "update itemmaster set balqty=@balqty where itemid=@itemid";
+                    cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@balqty", bq);
+                    cmd.Parameters.AddWithValue("itemid", DropDownList1.Text);
+                    cmd.ExecuteNonQuery();
+                    Label1.Text = "record updated";
+                }
             }
             catch (Exception ex)
             {
                 Label1.Text = ex.ToString();
             }
             finally { con.Close(); }
-        }
 
+        } 
+          
+        
+   
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             TextBox2.Text = GridView1.SelectedRow.Cells[4].Text;
+            oldtransqty=Convert.ToInt32(TextBox2.Text);
+            string res= GridView1.SelectedRow.Cells[3].Text;
+            if (res=="I")
+            {
+                RadioButton2.Checked = false;
+                RadioButton1.Checked = true;
+
+            }
+            else if (res=="R")
+            {
+                RadioButton1.Checked = false;
+                RadioButton2.Checked = true;
+            }
+            DateTime dt = Convert.ToDateTime(GridView1.SelectedRow.Cells[5].Text);
+            TextBox1.Text = dt.ToString("yyyy-MM-dd");
+            DropDownList1.SelectedValue = GridView1.SelectedRow.Cells[1].Text;
+            transid = Convert.ToInt32(GridView1.SelectedRow.Cells[1].Text) ;
         }
 
         protected void Button3_Click(object sender, EventArgs e)

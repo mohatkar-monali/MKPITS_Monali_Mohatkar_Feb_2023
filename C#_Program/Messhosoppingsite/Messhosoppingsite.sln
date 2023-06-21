@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messhosoppingsite", "Messhosoppingsite\Messhosoppingsite.csproj", "{C556B816-0460-408B-A499-4C65CF8F4EFB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C556B816-0460-408B-A499-4C65CF8F4EFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C556B816-0460-408B-A499-4C65CF8F4EFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C556B816-0460-408B-A499-4C65CF8F4EFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C556B816-0460-408B-A499-4C65CF8F4EFB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {693933C4-4CFD-49CD-9E96-4A7A65FA01B2}
+	EndGlobalSection
+EndGlobal

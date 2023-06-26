@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model textboxforex.Models.SignUpModel
+
+
+@using(Html.BeginForm("Index","SignUp",FormMethod.Post))
+{
+    <h1>Sign Up Form</h1>
+    <b>User Name</b>
+    @Html.TextBoxFor(m=>m.Name,new {@value="Enter Name",@class="red"})
+    <br/><br/>
+    <b>Password</b>
+    @Html.TextBoxFor(m=>m.Password,new{@value="password",@class="red"})
+    <br/><br/>
+    <input type="Submit" value="Sign Up"/>
+}
+
+<br/><br/>
+<h5>User Information</h5>
+<b>Name:</b>
+@ViewBag.Name
+<br/>
+<b>Passsword</b>
+@ViewBag.Password

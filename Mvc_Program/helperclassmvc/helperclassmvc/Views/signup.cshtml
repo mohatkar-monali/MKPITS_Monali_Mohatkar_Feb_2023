@@ -1,0 +1,17 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using(Html.BeginForm("signup","signup",FormMethod.Post))
+{
+    <h1>Sign Up Form</h1>
+    <b>UserName</b>
+    @Html.TextBox("signup","signup",new {style="color:blue"})
+    <br/>
+    <b>Password</b>
+    @Html.TextBox("signup","signup",new {style="color:red"})
+    <br/>
+    <input type="submit" value="sign up"/>
+    <br />
+}
+<hr/>
+<!--code to display user insformation-->

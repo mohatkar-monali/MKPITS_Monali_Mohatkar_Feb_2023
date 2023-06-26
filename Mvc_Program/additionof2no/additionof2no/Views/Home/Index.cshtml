@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model additionof2no.Models.CalculateModel
+
+@using(Html.BeginForm("Index","Home",FormMethod.Post))
+{
+    <h3>Addition Form</h3>
+    <br/>
+    <b>Enetr Number1</b>
+    @Html.TextAreaFor(m=>m.num1,new {@value="num1",@class="red"})
+    <br/>
+    <b>Enetr Number1</b>
+
+    @Html.TextAreaFor(m=>m.num2,new {@value="num2",@class="red"})
+    <br />
+    <input type="submit" value="Add"/>
+}
+
+<h5>Calculation is:</h5>
+@ViewBag.res;

@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model checkoperation.Models.Operation
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    <h3>Want Calaculation</h3>
+    <br/>
+    <b>Enetr Number1</b>
+    @Html.TextAreaFor(m=>m.number1)
+    <br/>
+    <b>Enter Number2</b>
+    @Html.TextAreaFor(m=>m.number2)
+    <br/>
+    <span>Addition:</span>
+    @Html.CheckBoxFor(m=>m.addition,true)
+    <br/>
+    <span>Substraction:</span>
+    @Html.CheckBoxFor(m=>m.substraction,false)
+    <br/>
+    <span>Multiplication</span>
+    @Html.CheckBoxFor(m=>m.multiplication,false)
+    <br/>
+    <input type="submit" value="Ok"/>
+}
+
+<b>Calculation Result:</b>
+<br/>
+Addition is=@ViewBag.result1
+<br/>
+Substraction is=@ViewBag.result2
+<br/>
+Miltiplication is=@ViewBag.result3

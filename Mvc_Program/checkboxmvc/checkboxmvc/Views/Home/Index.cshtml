@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model checkboxmvc.Models.UserModel
+
+@using(Html.BeginForm("Index","Home",FormMethod.Post))
+{
+    <b>Want Additional Benefit</b>
+    <br/>
+    <span>Tea:</span>
+    @Html.CheckBox("Tea",true)
+    <br/>
+    <span>Loundary:</span>
+   @Html.CheckBox("Loundary",false)
+   <br/>
+   <span>Breakfast:</span>
+   @Html.CheckBox("Breakfast",false)
+   <br/>
+   <input type="submit" value="Submit"/>
+}
+
+<hr/>
+<h5>-----You Selected------</h5>
+<br/>
+Tea:@ViewBag.Tea
+<br/>
+Loudary:@ViewBag.Loundary
+<br/>
+Breakfast:@ViewBag.Breakfast

@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model operatormvc.Models.Operator
+
+<h1>Find opeartor</h1>
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    <b>Enter number 1</b>
+    @Html.TextBoxFor(k=>k.num1)
+    <br />
+    <br />
+
+    <b>Enter number 2</b>
+    @Html.TextBoxFor(k=>k.num2)
+    <br />
+    <br />
+
+    <b>Enter operator</b>
+    @Html.TextBoxFor(k=>k.op)
+    <br />
+    <br />
+
+    
+
+    
+    <input type="submit" value="operator" />
+
+
+}
+<style>
+    .blue {
+        color: cadetblue
+    }
+</style>
+number1:@ViewBag.num1<br/>
+number2:@ViewBag.num2<br/>
+
+Result is:@ViewBag.result<br/>

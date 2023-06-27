@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model Employeesal.Models.Employee
+
+@using(Html.BeginForm("Index","Home",FormMethod.Post))
+{
+    <H4>Employee Details</H4>
+    <br/>
+    <b>Employee Name:</b>
+    @Html.TextBoxFor(m=>m.EmpName)
+    <br/>
+    <b>Basic Salary:</b>
+    @Html.TextBoxFor(m=>m.BasicSalary)
+    <br/>
+    <span>Hra</span>
+    @Html.CheckBoxFor(m=>m.hra,true)
+    <br/>
+    <span>Da</span>
+    @Html.CheckBoxFor(m=>m.da,false)
+    <br/>
+    <span>Ta</span>
+    @Html.CheckBoxFor(m=>m.ta,false)
+    <br/>
+  <input type="submit" value="Ok"/>
+}
+<hr/>
+<h4>----Total Salary----</h4>
+<br/>
+Hra:@ViewBag.result1
+<br/>
+Da:@ViewBag.result2
+<br/>
+Ta:@ViewBag.result3
+<br/>
+Total Salary:@ViewBag.totalsal

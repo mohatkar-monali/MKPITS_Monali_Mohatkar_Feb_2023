@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model AccountDetails.Models.Account
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    <h5>Bank Account</h5><br/>
+    <b>Name:</b>
+    @Html.TextBoxFor(m=>m.Name)<br/>
+    <b>Amount</b>
+    @Html.TextBoxFor(m=>m.amount)
+    <br/>
+    <b>Deposite</b>
+
+    @Html.RadioButtonFor(m=>m.acttype,"Deposite")
+    <b>Withdraw</b>
+
+    @Html.RadioButtonFor(m=>m.acttype,"Withdraw")
+    <br/>
+    <input type="submit" value="Ok"/>
+}
+
+<b>Balance Details</b>
+<br/>
+<b>Bal is=</b>
+@ViewBag.res

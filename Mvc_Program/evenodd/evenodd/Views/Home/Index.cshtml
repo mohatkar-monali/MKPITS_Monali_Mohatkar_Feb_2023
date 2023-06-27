@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model evenodd.Models.Even
+@using (Html.BeginForm("Index", "Home",FormMethod.Post))
+{
+    <h5>Enter Number</h5>
+    @Html.TextBoxFor(m=>m.n1 )
+    <br />
+    <br />
+    <input type="submit" value="ok" />
+
+
+}
+<hr />
+<h5>Number is</h5>
+result=@ViewBag.result
+<br />
+

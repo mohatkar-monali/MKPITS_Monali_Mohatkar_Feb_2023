@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div style="border:1px solid black;"><br/>
+<h3 align="center"><b>Students Attendence Sheet</b></h3>
+<br/>
+@model AtendenceSheet.Models.Attendence
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+        <h5><b style="padding:150px">Batch
+        @Html.TextBoxFor(m=>m.Name)</b></h5>
+        <br/>
+        <h5>
+            <b style="padding:150px">
+                Date
+                @Html.TextBoxFor(m=>m.date)
+            </b>
+        </h5>
+
+        <div width="100%">
+            <div width="50%">
+                <B>Name</B>
+            </div>
+            <div width="50%">
+                <b>Attendence</b>
+            </div>
+        </div>
+}
+</div>

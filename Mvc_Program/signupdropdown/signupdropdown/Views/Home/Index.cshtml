@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model signupdropdown.Models.Signup
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    <h5>Sign Up Form</h5><br/>
+    <span>Enetr Name</span>@Html.TextBoxFor(m=>m.username)<br/>
+    <span>Male</span>@Html.RadioButtonFor(m=>m.gender,"Male")
+    <span>Female</span>@Html.RadioButtonFor(m=>m.gender,"Female")<br/>
+    <span>DotNet</span>@Html.CheckBoxFor(m=>m.sub1,true)
+    <span>Java</span>@Html.CheckBoxFor(m=>m.sub2,true)<br/>
+    <span>City</span>@Html.DropDownListFor(m=>m.getcity,new SelectList(Enum.GetValues(typeof(city))),"--select city--")
+    <br/>
+    <input type="submit" value="submit"/>
+}
+<br/><br/>
+<h5>Sign Up Details</h5>
+Name:@ViewBag.uname<br/>
+Gender:@ViewBag.gen<br/>
+Course:@ViewBag.cs<br/>
+City:@ViewBag.city<br/>
+Subject1:@ViewBag.sub1<br/>
+subject2:@ViewBag.sub2<br/>

@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model actionlink.Models.ActionModel
+@using (Html.BeginForm("index", "Home", FormMethod.Post))
+{
+    
+
+<!-- Redirect in Same Controller -->
+@Html.ActionLink("Contact Page","Index","Contact")
+}

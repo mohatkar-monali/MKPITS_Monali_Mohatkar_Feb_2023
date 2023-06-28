@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model displayfor.Models.Display
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    <b>Display ex</b>
+    @Html.TextBoxFor(m=>m.username)
+    <input type="submit" value="submit"/>
+}
+
+<strong>Strong type</strong>@Html.Display("username")<br/>
+<strong>Loose Type</strong>@Html.DisplayFor(m=>m.username)

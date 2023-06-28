@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model accountdropdownlistfor.Models.Account
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    <b>Enter Account No:</b>@Html.TextBoxFor(m=>m.accountno)<br/><br/>
+    <b>Enter Amount:</b>@Html.TextBoxFor(m=>m.amount)<br/><br/>
+    <b>Select Type:</b>@Html.DropDownListFor(m=>m.GetTranstype,new SelectList(Enum.GetValues(typeof(transtype))),"--select type--")<br/><br/>
+    <input type="submit" value="submit"/><br/>
+    <br/><br/>
+}
+
+<h3>Transaction Details:</h3>
+Account No:@ViewBag.accno<br/><br/>
+Balance amount:@ViewBag.bal<br/>
+Type:@ViewBag.typ

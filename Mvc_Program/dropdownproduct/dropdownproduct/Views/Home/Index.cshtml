@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model dropdownproduct.Models.Product
+@using(Html.BeginForm("index","Home",FormMethod.Post))
+{
+    <h4>Enter Product Details</h4><br/><br/>
+    <span>Enter order no</span>
+    @Html.TextBoxFor(m=>m.orderno)<br/><br/>
+    <span>Enter Name</span>
+    @Html.TextBoxFor(m=>m.custname)<br/><br/>
+    <span>Select Product</span>
+    @Html.DropDownListFor(m=>m.producttype,new SelectList(Enum.GetValues(typeof(product))),"---select product--")<br/><br/>
+    <span>Enter Price</span>
+    @Html.TextBoxFor(m=>m.price)<br/><br/>
+    <span>Enter Quantity</span>
+    @Html.TextBoxFor(m=>m.quantity)<br/><br/>
+   <input type="submit" value="submit"/>
+<br/><br/>
+}
+
+<h4>Product Details:-</h4><br/>
+Order No:@ViewBag.ono<br/>
+Name:@ViewBag.cname<br/>
+Price:@ViewBag.price<br />
+Quantity:@ViewBag.qty<br/>
+Product Name:@ViewBag.ptype<br/>
+Total Price:@ViewBag.totalprice<br/>

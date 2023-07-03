@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model validationmesgfor.Models.UserModel
+
+@using (Html.BeginForm("Index","Home",FormMethod.Post))
+{
+    <strong>Name </strong> @Html.EditorFor(m => m.Name)
+    @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    <input id="Submit" type="submit" value="submit" />
+}

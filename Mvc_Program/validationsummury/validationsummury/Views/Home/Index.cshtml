@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model validationsummury.Models.UserModel
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    <h1>User Registration</h1><br/>
+    <span>@Html.LabelFor(m=>m.Name)
+    @Html.TextBoxFor(m=>m.Name)<br/></span>
+    <br/>
+    <span>
+        @Html.LabelFor(m=>m.MobileNumber)
+        @Html.TextBoxFor(m=>m.MobileNumber)<br />
+    </span>
+    <br/>
+    <input type="submit" value="submit"/>
+    <br/>
+    @Html.ValidationSummary(false,"",new {@class="alert-danger"})
+}
+
+<h4>User Information</h4><br/>
+   Name: @ViewBag.User<br/>
+   Mobile Number:@ViewBag.mob

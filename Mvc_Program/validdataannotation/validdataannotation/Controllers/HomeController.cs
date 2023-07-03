@@ -1,8 +1,8 @@
-﻿using AtendenceSheet.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using validdataannotation.Models;
 
-namespace AtendenceSheet.Controllers
+namespace validdataannotation.Controllers
 {
     public class HomeController : Controller
     {
@@ -22,14 +22,6 @@ namespace AtendenceSheet.Controllers
         {
             return View();
         }
-        [HttpPost]
-        public IActionResult Index(Attendence A)
-        {
-            ViewBag.batchtype = A.batchtype;
-            ViewBag.course = A.getcourse;
-            return View();
-        }
-        
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

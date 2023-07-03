@@ -9,22 +9,70 @@
 @using (Html.BeginForm("Index", "Home", FormMethod.Post))
 {
         <h5><b style="padding:150px">Batch
-        @Html.TextBoxFor(m=>m.Name)</b></h5>
+          @*  @Html.TextBoxFor(m=>m.batch)*@
+               @Html.DropDownListFor(m=>m.batchtype,new SelectList(Enum.GetValues(typeof(batch))))
+            </b>
+
+            @Html.DropDownListFor(m=>m.getcourse,new SelectList(Enum.GetValues(typeof(course))),"select")
+            <br></br>
+
+            <input type="submit" value="click" />
+
+        </h5>
+        
+
         <br/>
+
         <h5>
             <b style="padding:150px">
                 Date
                 @Html.TextBoxFor(m=>m.date)
             </b>
         </h5>
+        <br/><br/><br/>
+        
+        <div class="container" style="padding:10px;">
+            <div class="row" style="border:1px solid grey;">
+                <div class="col-sm">
+                   <b> Sr No</b><br/><br/>
+                    1<br/>
+                    2<br/>
+                    3<br/>
+                    4<br/>
+                    5<br/><br/>
+                </div>
+                <div class="col-sm">
+                    <b>Name</b><br/><br/>
+                    Tanushri<br/>
+                    Anushri<br/>
+                    Janushri<br/>
+                    Bhanushri<br/>
+                    Shreya<br/><br/>
 
-        <div width="100%">
-            <div width="50%">
-                <B>Name</B>
-            </div>
-            <div width="50%">
-                <b>Attendence</b>
+                </div>
+                <div class="col-sm">
+                   <b>Attendence Status</b><br/><br/>
+                           @Html.CheckBoxFor(m=>m.status)<br/>
+                           @Html.CheckBoxFor(m=>m.status)<br/>
+                           @Html.CheckBoxFor(m=>m.status)<br/>
+                           @Html.CheckBoxFor(m=>m.status)<br/>
+                           @Html.CheckBoxFor(m=>m.status)<br /><br/>
+
+                </div>
+                <div class="col-sm">
+                    <b>Date</b><br/><br/>
+                    29/06/2023<br/>
+                    29/06/2023<br/>
+                    29/06/2023<br />
+                    29/06/2023<br />
+                    29/06/2023<br/><br/>
+                </div>
             </div>
         </div>
+        <br/><br/>
 }
 </div>
+<br/><br/>
+<span><b>Percentage of total student present:<b/></span>
+    }
+    }

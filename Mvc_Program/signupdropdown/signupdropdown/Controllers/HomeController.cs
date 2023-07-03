@@ -35,7 +35,7 @@ namespace signupdropdown.Controllers
             ViewBag.sub1 = null;
             ViewBag.sub2 = null;
             if (sp.sub1 == true)
-            {
+            {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
                 ViewBag.sub1 = "dotnet";
             }
            else if (sp.sub2 == true)

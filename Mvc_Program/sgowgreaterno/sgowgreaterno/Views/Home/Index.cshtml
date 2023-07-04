@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model sgowgreaterno.Models.GreaterModel
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    <span>@Html.LabelFor(m=>m.num1)
+           @Html.TextBoxFor(m=>m.num1)</span><br/>
+   <span>@Html.LabelFor(m=>m.num1)
+                  @Html.TextBoxFor(m=>m.num2)</span>  <br/>             
+  <input type="submit" value="submit"/>
+}
+Result:@ViewBag.res

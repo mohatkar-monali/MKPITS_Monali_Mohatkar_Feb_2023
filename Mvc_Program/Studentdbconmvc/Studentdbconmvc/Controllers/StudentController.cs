@@ -46,7 +46,7 @@ namespace Studentdbconmvc.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit(StudentList st,int stdid)
+        public ActionResult Edit(int stdid,StudentList st)
         {
             try
             {
@@ -54,7 +54,28 @@ namespace Studentdbconmvc.Controllers
                 handler.UpdateStudent(st);
                 return RedirectToAction("Index");
             }
-            catch
+            catch(Exception ex) 
+            {
+                return View();
+            }
+        }
+
+        [HttpGet]
+        public ActionResult Delete(int StdId)
+        {
+            StudentDbHandler Handler = new StudentDbHandler();
+            return View(Handler.GetStudent().Find(m => m.StdId == StdId));
+        }
+        [HttpPost]
+        public ActionResult Delete(int id, StudentList st)
+        {
+            try
+            {
+                StudentDbHandler db = new StudentDbHandler();
+                db.DeleteStudent(st);
+                return RedirectToAction("Index");
+            }
+            catch 
             {
                 return View();
             }

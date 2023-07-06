@@ -13,36 +13,18 @@ namespace Studentdbconmvc.Models
         public void Conncetion()
         {
             string constr = "server=INBOOK_X1\\TEW_SQLEXPRESS;integrated security=true;database=ConItemDb";
-            con=new SqlConnection(constr);
+            con = new SqlConnection(constr);
         }
 
         public bool InsertStudent(StudentList st)
         {
             Conncetion();
             string qurey = "Insert into studenttable values('" + st.Name + "','" + st.Rollno + "','" + st.Email + "','" + st.MobileNo + "')";
-            SqlCommand cmd = new SqlCommand(qurey,con);
+            SqlCommand cmd = new SqlCommand(qurey, con);
             con.Open();
-            int i=cmd.ExecuteNonQuery();
+            int i = cmd.ExecuteNonQuery();
             con.Close();
-            if(i >= 1)
-            {
-                return true;
-            }
-            else
-            {
-              return false;
-            }
-
-        }
-        public bool UpdateStudent(StudentList st)
-        {
-            Conncetion();
-            string query = "update studenttable SET name='" + st.Name + "',RollNo='" + st.Rollno + "',Email='" + st.Email + "',MobileNo='" + st.MobileNo + "' where studid= '"+st.StdId+"'";
-            SqlCommand cmd = new SqlCommand(query,con);
-            con.Open();
-            int i=cmd.ExecuteNonQuery();
-            con.Close();
-            if(i >= 1)
+            if (i >= 1)
             {
                 return true;
             }
@@ -50,19 +32,21 @@ namespace Studentdbconmvc.Models
             {
                 return false;
             }
+
         }
+
         public List<StudentList> GetStudent()
         {
             Conncetion();
-            List<StudentList> list=new List<StudentList>();
+            List<StudentList> list = new List<StudentList>();
             string query = "select * from studenttable";
-            SqlCommand cmd= new SqlCommand(query,con);
+            SqlCommand cmd = new SqlCommand(query, con);
             SqlDataAdapter ad = new SqlDataAdapter(cmd);
-            DataTable dt=new DataTable();
+            DataTable dt = new DataTable();
             con.Open();
             ad.Fill(dt);
             con.Close();
-            foreach(DataRow dr in dt.Rows)
+            foreach (DataRow dr in dt.Rows)
             {
                 list.Add(new StudentList
                 {
@@ -75,6 +59,42 @@ namespace Studentdbconmvc.Models
             }
             return list;
 
+        }
+
+        public bool UpdateStudent(StudentList st)
+        {
+            Conncetion();
+            string query = "update studenttable SET Name='" + st.Name + "',RollNo='" + st.Rollno + "',Email='" + st.Email + "',MobileNo='" + st.MobileNo + "' where  StudId= '" + st.StdId + "'";
+            SqlCommand cmd = new SqlCommand(query, con);
+            con.Open();
+            int i = cmd.ExecuteNonQuery();
+            con.Close();
+            if (i >= 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool DeleteStudent(StudentList st)
+        {
+            Conncetion();
+            string query = "delete from studenttable where studId='" + st.StdId + "'";
+            SqlCommand cmd = new SqlCommand(query, con);
+            con.Open();
+            int i = cmd.ExecuteNonQuery();
+            con.Close();
+            if (i >= 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

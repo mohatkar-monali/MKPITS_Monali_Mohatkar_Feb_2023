@@ -1,0 +1,35 @@
+﻿
+<h4>Pure Html Form Type</h4>
+@model PureHtmlAjaxJquery.Models.UserModel
+    @using (Html.BeginForm("Index","Home",FormMethod.Post))
+            {
+                <table>
+                    <tr>
+                        <td>Enter Id:</td>
+                        <td><input type="text" id="ID"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Enter Name:
+                        </td>
+                        <td><input type="text" id="Name"></td>
+                    </tr>
+                    <tr>
+                        <td>Addon:</td>
+                        <td><input type="checkbox" id="Addon"></td>
+                    </tr>
+                </table>
+                <button onclick="submit()">Submit From</button><br/>
+            }
+<script src="~/Scripts/jquery-3.7.0.min.js" type="text/javascript"></script>
+
+<script>
+    function submit() {
+        var data = {
+            Id: $('#Id').val(),
+            Name: $('#Name').val(),
+            Addon: $('#Addon').is(':checked')
+        };
+        $.post("/Home/Form1", { sm: data }, function () { alert('Successfully Saved') });
+    }
+</script>

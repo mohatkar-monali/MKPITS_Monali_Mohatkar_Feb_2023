@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PureHtmlAjaxJquery", "PureHtmlAjaxJquery\PureHtmlAjaxJquery.csproj", "{B0D8AE24-86EC-468F-B9F5-76F926A9F464}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0D8AE24-86EC-468F-B9F5-76F926A9F464}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0D8AE24-86EC-468F-B9F5-76F926A9F464}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0D8AE24-86EC-468F-B9F5-76F926A9F464}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0D8AE24-86EC-468F-B9F5-76F926A9F464}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C8C0D91E-771A-4A94-9558-12AC3B1FBE2D}
+	EndGlobalSection
+EndGlobal

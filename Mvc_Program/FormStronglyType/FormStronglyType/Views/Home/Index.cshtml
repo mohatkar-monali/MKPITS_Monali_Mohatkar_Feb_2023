@@ -1,0 +1,36 @@
+﻿<h2>Strongly Type</h2>
+
+@model FormStronglyType.Models.UserModel
+
+@using (Html.BeginForm("Form1","Home",FormMethod.Post))
+            {
+                <table>
+                    <tr>
+                        <td>Enter Id:</td>
+                        <td>
+                            @Html.TextBoxFor(m => m.Id)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Enter Name:</td>
+                        <td>
+                            @Html.TextBoxFor(m => m.Name)
+                        </td>
+                    </tr>
+                   <tr>
+                    <td>Enter Addon:</td>
+                    <td>
+                        @Html.CheckBoxFor(m => m.Addon)
+                    </td>
+                    </tr>
+                </table>
+
+                <input type="submit" value="submit"/>
+            }
+
+<br/>
+Id:@ViewBag.id<br/>
+Name:@ViewBag.name<br/>
+Addon:@ViewBag.addon
+
+

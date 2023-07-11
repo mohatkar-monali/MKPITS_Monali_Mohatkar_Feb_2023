@@ -1,0 +1,59 @@
+﻿
+<fieldset>
+    <div class="from-horizontal">
+        <div class="editor-lable">
+            Product Name
+        </div>
+        <div class="editor-lable">
+            <input type="text" id="txtName" />
+        </div>
+        <div class="editor-lable">
+            Category
+        </div>
+        <div class="editor-lable">
+            <select id="txtCategory">
+                <option value="Computers">Computers</option>
+                <option value="Computers">Mobiles</option>
+
+            </select>
+        </div>
+     
+        <div class="editor-lable">
+            Quantity
+        </div>
+        <div class="editor-lable">
+            <input type="text" id="txtQuantity">
+        </div>
+        <div class="editor-lable">
+            Price
+        </div>
+        <div class="editor-lable">
+            <input type="text" id="txtprice">
+        </div>
+        <div>
+            <input class="btn-default" type="button" id="btnSave" value="Save" />
+        </div>
+    </div>
+</fieldset>
+
+<script src="~/Scripts/jquery-3.7.0.min.js" type="text/javascript"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#btnSave').click(function () {
+            $.ajax(
+                {
+                    type: "POST",
+                    url: "/Home/Product",
+                    data:
+                    {
+                        ProductName: $('#ProdName').val(),
+                        Category: $('#Category').val(),
+                        Quantity: $('#Quantity').val(),
+                        Price: $('Price').val()
+                    },
+                    success: alter("record inserted")
+                });
+        });
+    });
+</script>

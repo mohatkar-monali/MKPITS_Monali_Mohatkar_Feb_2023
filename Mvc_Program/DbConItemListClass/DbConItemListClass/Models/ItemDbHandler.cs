@@ -27,7 +27,7 @@ namespace DbConItemListClass.Models
             int i=cmd.ExecuteNonQuery();
             con.Close();
             if(i>=1 )
-            {
+            {   
                 return true;
             }
             else

@@ -18,14 +18,14 @@ namespace DbConItemListClass.Controllers
         }
 
         [HttpGet] 
-        public ActionResult Create()
+        public ActionResult Create() 
         {
             return View();
         }
 
         [HttpPost]
         public ActionResult Create(ItemModel im)
-        {
+        {  
             if(ModelState.IsValid)
             {
                 ItemDbHandler db = new ItemDbHandler();
@@ -40,7 +40,7 @@ namespace DbConItemListClass.Controllers
         }
         [HttpGet]
         public ActionResult Edit(int id)
-        {
+        {                                                    
             ItemDbHandler Handler = new ItemDbHandler();
             return View(Handler.GetItems().Find(m=>m.Id==id));
         }

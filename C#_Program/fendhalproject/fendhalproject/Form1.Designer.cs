@@ -350,6 +350,7 @@
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(220, 26);
             this.textBox9.TabIndex = 10;
+            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
             // comboBox2
             // 

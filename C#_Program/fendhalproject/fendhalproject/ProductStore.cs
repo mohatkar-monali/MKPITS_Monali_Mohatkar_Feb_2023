@@ -14,6 +14,7 @@ namespace fendhalproject
 
         //create static variable
         private static string connection = "server=INBOOK_X1\\TEW_SQLEXPRESS;integrated security=true;database=Fendhal;";
+       
         //create static method
         public static SqlConnection GetSqlConnection()
         {

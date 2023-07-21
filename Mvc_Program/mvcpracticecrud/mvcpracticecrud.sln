@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mvcpracticecrud", "mvcpracticecrud\mvcpracticecrud.csproj", "{0CA3D37A-A0EE-4317-BB57-E55678F6F82A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0CA3D37A-A0EE-4317-BB57-E55678F6F82A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CA3D37A-A0EE-4317-BB57-E55678F6F82A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CA3D37A-A0EE-4317-BB57-E55678F6F82A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CA3D37A-A0EE-4317-BB57-E55678F6F82A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6D49BF52-F8D2-4DA2-A407-DD6336E63521}
+	EndGlobalSection
+EndGlobal
